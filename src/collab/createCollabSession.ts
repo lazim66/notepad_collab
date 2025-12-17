@@ -17,7 +17,7 @@ export interface CollabSessionOptions {
   roomName?: string;
 }
 
-const DEFAULT_WS_URL = 'ws://localhost:1234';
+const DEFAULT_WS_URL = import.meta.env.VITE_WS_URL || 'ws://localhost:1234';
 const DEFAULT_ROOM_NAME = 'collab-notepad';
 
 export function createCollabSession(

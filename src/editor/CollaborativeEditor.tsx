@@ -55,6 +55,9 @@ export function CollaborativeEditor({ session, onEditorChange }: CollaborativeEd
 
   // Track connection status
   useEffect(() => {
+    // Sync initial status in case it changed before effect ran
+    setStatus(session.provider.wsconnected ? 'connected' : 'connecting');
+
     const handleStatus = (event: { status: string }) => {
       setStatus(event.status);
     };
