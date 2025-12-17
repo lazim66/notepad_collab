@@ -1,5 +1,6 @@
 import { WebSocketServer } from 'ws';
-import { setupWSConnection } from 'y-websocket/bin/utils.js';
+import * as Y from 'yjs';
+import { setupWSConnection } from './y-websocket-utils.js';
 
 const port = process.env.PORT || 1234;
 const wss = new WebSocketServer({ port });

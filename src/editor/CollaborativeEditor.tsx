@@ -55,7 +55,7 @@ export function CollaborativeEditor({ session, onEditorChange }: CollaborativeEd
 
   // Track connection status
   useEffect(() => {
-    // Sync initial status in case it changed before effect ran
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setStatus(session.provider.wsconnected ? 'connected' : 'connecting');
 
     const handleStatus = (event: { status: string }) => {
