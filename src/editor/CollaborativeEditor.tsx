@@ -23,6 +23,7 @@ export function CollaborativeEditor({ session, onEditorChange }: CollaborativeEd
     extensions: [
       StarterKit.configure({
         // Disable the default History extension so Collaboration extension can handle it
+        // @ts-expect-error History is a valid option but types might be mismatching
         history: false,
       }),
       Collaboration.configure({

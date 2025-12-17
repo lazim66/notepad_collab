@@ -11,7 +11,8 @@ export function exportAsMarkdown(editor: Editor | null): string {
   
   try {
     // Attempt to use Tiptap's markdown extension serializer
-    return editor.storage.markdown.getMarkdown();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return (editor.storage as any).markdown.getMarkdown();
   } catch {
     console.warn('Markdown extension not available, falling back to text');
     return editor.getText();

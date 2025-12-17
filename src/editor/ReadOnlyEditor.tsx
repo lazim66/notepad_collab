@@ -13,6 +13,7 @@ export function ReadOnlyEditor({ doc }: ReadOnlyEditorProps) {
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
+        // @ts-expect-error History is a valid option but types might be mismatching
         history: false,
       }),
       Collaboration.configure({
