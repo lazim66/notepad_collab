@@ -1,0 +1,47 @@
+{
+  "name": "notepad-collab",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "server": "npx y-websocket",
+    "dev:all": "npm run server & npm run dev",
+    "build": "tsc -b && vite build",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "validate": "npm run type-check && npm run lint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tiptap/extension-collaboration": "^3.13.0",
+    "@tiptap/extension-collaboration-caret": "^3.13.0",
+    "@tiptap/extension-placeholder": "^3.13.0",
+    "@tiptap/react": "^3.13.0",
+    "@tiptap/starter-kit": "^3.13.0",
+    "lib0": "^0.2.115",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tiptap-markdown": "^0.9.0",
+    "ws": "^8.18.3",
+    "y-indexeddb": "^9.0.12",
+    "y-websocket": "^3.0.0",
+    "y-websocket-server": "^1.0.2",
+    "yjs": "^13.6.27"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.4"
+  }
+}
