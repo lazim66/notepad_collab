@@ -60,6 +60,31 @@
   align-items: center;
 }
 
+.sidebar-toggle-button {
+  padding: 8px 16px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sidebar-toggle-button:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #1e293b;
+}
+
+.sidebar-toggle-button:active {
+  transform: scale(0.98);
+}
+
 .app-container {
   display: grid;
   grid-template-columns: 1fr 340px;
@@ -79,7 +104,7 @@
   flex-direction: column;
 }
 
-.history-sidebar {
+.ai-sidebar {
   min-width: 0;
   height: 100%;
   display: flex;
@@ -93,9 +118,9 @@
     grid-template-rows: 1fr auto;
     height: auto;
   }
-  
-  .history-sidebar {
-    height: 500px; /* Fixed height for mobile history panel */
+
+  .ai-sidebar {
+    height: 500px; /* Fixed height for mobile AI panel */
   }
 }
 

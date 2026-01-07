@@ -17,6 +17,9 @@ A real-time collaborative rich-text editor built with React, TipTap, and Yjs. Mu
 - Node.js (v18 or higher)
 - npm or yarn
 
+### AI setup (optional)
+- Create `.env.local` and set `OPENAI_API_KEY` to enable the AI assistant (used by `npm run ai-server`).
+
 ### Installation
 
 1. Clone the repository:
@@ -45,6 +48,9 @@ npm run server
 
 # Terminal 2: Start the React dev server
 npm run dev
+
+# Terminal 3: Start the AI server
+npm run ai-server
 ```
 
 4. Open multiple browser windows/tabs to `http://localhost:5173` to test collaboration.

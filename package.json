@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "server": "node server.js",
-    "dev:all": "npm run server & npm run dev",
+    "ai-server": "node ai-server.js",
+    "dev:all": "npm run server & npm run ai-server & npm run dev",
     "build": "tsc -b && vite build",
     "type-check": "tsc --noEmit",
     "lint": "eslint .",
@@ -18,9 +19,14 @@
     "@tiptap/extension-collaboration": "^3.13.0",
     "@tiptap/extension-collaboration-caret": "^3.13.0",
     "@tiptap/extension-placeholder": "^3.13.0",
+    "@tiptap/extension-unique-id": "^3.15.1",
     "@tiptap/react": "^3.13.0",
     "@tiptap/starter-kit": "^3.13.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
     "lib0": "^0.2.115",
+    "openai": "^6.15.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "tiptap-markdown": "^0.9.0",
@@ -28,7 +34,8 @@
     "y-indexeddb": "^9.0.12",
     "y-websocket": "^3.0.0",
     "y-websocket-server": "^1.0.2",
-    "yjs": "^13.6.27"
+    "yjs": "^13.6.27",
+    "zod": "^4.3.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

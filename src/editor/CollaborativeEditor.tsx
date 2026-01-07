@@ -1,10 +1,11 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useEditor, EditorContent, type Editor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-import Collaboration from '@tiptap/extension-collaboration';
+import Collaboration, { isChangeOrigin } from '@tiptap/extension-collaboration';
 import CollaborationCaret from '@tiptap/extension-collaboration-caret';
 import Placeholder from '@tiptap/extension-placeholder';
 import { Markdown } from 'tiptap-markdown';
+import { UniqueID } from '@tiptap/extension-unique-id';
 import type { CollabSession } from '../collab/createCollabSession';
 import { getOrCreateUserIdentity } from '../collab/identity';
 import './CollaborativeEditor.css';
@@ -43,6 +44,10 @@ export function CollaborativeEditor({ session, onEditorChange }: CollaborativeEd
       Markdown.configure({
         html: true,
         transformCopiedText: true,
+      }),
+      UniqueID.configure({
+        types: ['paragraph', 'heading', 'blockquote', 'codeBlock', 'bulletList', 'orderedList'],
+        filterTransaction: (transaction) => !isChangeOrigin(transaction),
       }),
     ],
     editorProps: {
